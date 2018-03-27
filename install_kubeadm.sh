@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-echo "Going to install kuadm and init a k8s..."
+echo "Going to install kubeadm and init a k8s..."
 apt-get update && apt-get upgrade -y
 apt-get install -y docker.io
 echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
