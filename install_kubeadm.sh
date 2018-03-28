@@ -19,4 +19,6 @@ echo -e "k8s\nk8s" | passwd k8s
 usermod -aG sudo k8s
 
 cp config_kubeadm.sh /home/k8s/
+cp kube-flannel.yml /home/k8s/
+
 echo "Done!!!!"
