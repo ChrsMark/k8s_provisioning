@@ -3,6 +3,9 @@
 
 echo "Going to install kubeadm and init a k8s..."
 apt-get update && apt-get upgrade -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+apt-get update
 apt-get install docker-ce=18.06.1~ce~3-0~ubuntu -y
 echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
