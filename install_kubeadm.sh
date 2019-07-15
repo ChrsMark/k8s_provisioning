@@ -3,12 +3,12 @@
 
 echo "Going to install kubeadm and init a k8s..."
 apt-get update && apt-get upgrade -y
-apt-get install -y docker.io
+apt-get install docker-ce=18.06.1~ce~3-0~ubuntu -y
 echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 apt-get update
 
-apt-get install -y kubeadm=1.9.1-00 kubelet=1.9.1-00
+apt-get install kubeadm=1.14.1-00 kubelet=1.14.1-00
 
 
 wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
